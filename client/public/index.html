@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Shack User Management App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: #007bff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 3px;
+      color: #ffffff;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .navbar a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .home { background-color: #1e90ff; }
+    .youtube { background-color: #ff0000; }
+    .courses { background-color: #ff6347; }
+    .telegram { background-color: #0088cc; }
+    .instagram { background-color: #833ab4; }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 800px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    h2 {
+      color: #555;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .form-container {
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input, .form-group select {
+      width: calc(100% - 20px);
+      padding: 8px;
+      margin-right: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .form-group button {
+      width: 100%;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group button:hover {
+      background-color: #218838;
+    }
+
+    .user-list-container {
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    li:hover {
+      background-color: #f9f9f9;
+    }
+
+    .buttons-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .edit, .delete {
+      background-color: transparent;
+      color: #333;
+      border: 2px solid;
+      border-radius: 3px;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .edit {
+      border-color: #ffc107;
+      color: #ffc107;
+    }
+
+    .delete {
+      border-color: #dc3545;
+      color: #dc3545;
+    }
+
+    .edit:hover {
+      background-color: #ffc107;
+      color: #fff;
+    }
+
+    .delete:hover {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">DevOps Shack</div>
+    <div class="links">
+      <a href="/" class="home">Home</a>
+      <a href="https://www.youtube.com/@devopsshack/videos" class="youtube" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://www.devopsshack.com/" class="courses" target="_blank" rel="noopener noreferrer">Courses</a>
+      <a href="https://t.me/+9roGPjX1YI42Yzdl" class="telegram" target="_blank" rel="noopener noreferrer">Telegram</a>
+      <a href="https://www.instagram.com/devopsshack/" class="instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <h1>DevOps Shack User Management App</h1>
+
+      <!-- Add User Form -->
+      <div class="form-container">
+        <h2>Add User</h2>
+        <form id="addUserForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email" required />
+          </div>
+          <div class="form-group">
+            <label for="role">Role:</label>
+            <select id="role" required>
+              <option value="User">User</option>
+              <option value="Admin">Admin</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="submit-btn">Add User</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- User List -->
+      <div class="user-list-container">
+        <h2>User List</h2>
+        <ul id="userList">
+          <!-- User items will be dynamically added here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+</html>
+
