@@ -278,7 +278,8 @@ jobs:
           path: server-trivy-fs-report.txt
           if-no-files-found: warn
 
-    client-test:
+
+  client-test:
     name: Client Test
     runs-on: ubuntu-latest
     needs: client-lint
