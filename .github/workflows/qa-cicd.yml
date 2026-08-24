@@ -3,7 +3,7 @@ name: Enterprise DevSecOps CICD Pipeline
 on:
   push:
     branches:
-      - qa
+      - QA
     paths:
       - client/**
       - server/**
