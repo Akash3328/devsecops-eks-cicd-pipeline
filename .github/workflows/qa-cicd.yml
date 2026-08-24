@@ -38,7 +38,7 @@ jobs:
           path: gitleaks-report.json
           if-no-files-found: warn
 
-   checkov-terraform:
+  checkov-terraform:
     name: Checkov Terraform Scan
     runs-on: ubuntu-latest
     needs: gitleaks-scan
