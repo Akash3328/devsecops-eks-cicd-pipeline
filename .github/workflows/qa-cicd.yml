@@ -462,26 +462,4 @@ jobs:
           path: image-trivy-report.txt
           if-no-files-found: warn
 
-      - name: Generate source SBOM
-        uses: anchore/sbom-action@v0
-        with:
-          path: .
-          format: spdx-json
-          output-file: source-sbom.spdx.json
-          upload-artifact: true
-
-      - name: Generate image SBOM
-        uses: anchore/sbom-action@v0
-        with:
-          image: devopsshack/nodejs-app:${{ github.sha }}
-          format: spdx-json
-          output-file: image-sbom.spdx.json
-          upload-artifact: true  
-          
-      - name: Push
-        uses: docker/build-push-action@v7
-        with:
-          push: true
-          tags: |
-            devopsshack/nodejs-app:${{ github.sha }}
-            devopsshack/nodejs-app:latest
+    
