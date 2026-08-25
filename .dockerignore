@@ -1,0 +1,89 @@
+############################
+# Git & CI
+############################
+.git
+.gitignore
+.github
+.gitlab
+.gitlab-ci.yml
+
+############################
+# Docs & meta
+############################
+README.md
+Documentation.md
+*.md
+
+############################
+# Local env files
+############################
+.env
+.env.*
+*.env
+
+############################
+# Node modules & logs
+############################
+node_modules
+**/node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+############################
+# Build outputs
+############################
+client/build
+client/dist
+server/build
+server/dist
+coverage
+.tmp
+.cache
+
+############################
+# Dev tools & editors
+############################
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+
+############################
+# Terraform
+############################
+Terraform-files-for-Cluster
+*.tfstate
+*.tfstate.*
+.terraform
+.terraform.lock.hcl
+
+############################
+# Kubernetes manifests
+############################
+k8s-manifests
+RBAC
+*.yml
+*.yaml
+
+############################
+# CI/CD configs
+############################
+Jenkinsfile
+docker-compose.yml
+
+############################
+# OS / misc
+############################
+*.log
+*.tmp
+tmp/
+temp/
+
+############################
+# Test artifacts
+############################
+jest-report
+test-results
