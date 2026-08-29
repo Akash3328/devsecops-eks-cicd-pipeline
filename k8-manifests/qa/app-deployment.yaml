@@ -17,7 +17,7 @@ spec:
       - name: regcred
       containers:
       - name: nodejs-app
-        image: devopsshack/nodejs-app:008c8c568c31daef8d1825235638d292f50607b6
+        image: akashodedara/devsecops:008c8c568c31daef8d1825235638d292f50607b6
         ports:
         - containerPort: 5000
         env:
@@ -26,12 +26,12 @@ spec:
         - name: DB_NAME
           valueFrom:
             secretKeyRef:
-              name: mysql-secret
+              name: mysql-prod-secret
               key: MYSQL_DATABASE
         - name: DB_USER
           valueFrom:
             secretKeyRef:
-              name: mysql-secret
+              name: mysql-prod-secret
               key: MYSQL_USER
         - name: DB_PASSWORD
           valueFrom:

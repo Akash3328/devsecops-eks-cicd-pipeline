@@ -137,3 +137,30 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Project-specific generated files and secrets
+# Node dependencies
+client/node_modules/
+server/node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Kubernetes / cloud / secret files that should stay local
+acm-validation.json
+eks-describe-cluster-policy.json
+eso-secrets-policy.json
+github-oidc-trust.json
+iam_policy.json
+mysql-secret.json
+mysql/*.yaml
+mysql/*.yml
+mysql/*.json
+
+# Extra local editor / OS files
+.DS_Store
+.vscode/
+.idea/
+
