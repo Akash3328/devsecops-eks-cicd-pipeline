@@ -473,7 +473,7 @@ jobs:
       - name: Generate image SBOM
         uses: anchore/sbom-action@v0
         with:
-          image: devopsshack/nodejs-app:${{ github.sha }}
+          image: akashodedara/devsecops:${{ github.sha }}
           format: spdx-json
           output-file: image-sbom.spdx.json
           upload-artifact: true       
@@ -485,4 +485,32 @@ jobs:
           tags: |
             akashodedara/devsecops:${{ github.sha }}
             akashodedara/devsecops:latest
-    
+
+  update-qa-manifest:
+    name: Update QA Manifest
+    needs: docker
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout qa branch
+        uses: actions/checkout@v4
+        with:
+          ref: QA
+
+      - name: Update image tag in manifest
+        run: |
+          sed -i "s|image: akashodedara/devsecops:.*|image: akashodedara/devsecops:${GITHUB_SHA}|g" k8-manifests/qa/app-deployment.yaml
+
+      - name: Show updated manifest
+        run: |
+          cat k8-manifests/qa/app-deployment.yaml
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add k8-manifests/qa/app-deployment.yaml
+          git commit -m "Update QA image to ${GITHUB_SHA} [skip ci]" || echo "No changes to commit"
+          git push origin qa    
