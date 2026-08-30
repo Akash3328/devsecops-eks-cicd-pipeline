@@ -36,10 +36,11 @@ spec:
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: mysql-secret
+              name: mysql-prod-secret
               key: MYSQL_PASSWORD
+
         - name: DATABASE_URL
           valueFrom:
             secretKeyRef:
-              name: mysql-secret
+              name: mysql-prod-secret
               key: DATABASE_URL
