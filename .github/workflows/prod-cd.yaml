@@ -136,11 +136,11 @@ jobs:
           echo "Event: ${GITHUB_EVENT_NAME}"
           echo "Workflow: ${GITHUB_WORKFLOW}"
           echo "Workflow ref: ${GITHUB_WORKFLOW_REF}"
-          echo "SHA: ${GITHUB_SHA}"
 
-      # ------------------------------------------------------
-      # Inspect OIDC claims
-      # ------------------------------------------------------
+
+
+          echo "SHA: ${GITHUB_SHA}"   
+          
       - name: Inspect GitHub OIDC claims
         env:
           ACTIONS_ID_TOKEN_REQUEST_URL: ${{ env.ACTIONS_ID_TOKEN_REQUEST_URL }}
@@ -154,7 +154,6 @@ jobs:
           PAYLOAD=$(echo "$TOKEN" | cut -d '.' -f2 | tr '_-' '/+' | base64 -d 2>/dev/null || true)
 
           echo "===== GitHub OIDC Claims ====="
-
           echo "$PAYLOAD" | jq '{
             iss,
             aud,
@@ -167,15 +166,18 @@ jobs:
             workflow_ref,
             event_name
           }'
+          echo "=============================="     
 
-          echo "=============================="
+          echo "SHA: ${GITHUB_SHA}"    
 
-      # ------------------------------------------------------
-      # IMPORTANT:
-      # Do NOT use github/actions-oidc-debugger@main here.
-      # That action is currently failing while building its
-      # internal Go/Alpine environment.
-      # ------------------------------------------------------
+      - name: Debug OIDC token
+        uses: github/actions-oidc-debugger@main
+        id: oidc-debugger
+        with:
+          audience: sts.amazonaws.com    
+
+
+
       - name: Configure AWS credentials from GitHub OIDC
         uses: aws-actions/configure-aws-credentials@v4
         with:
