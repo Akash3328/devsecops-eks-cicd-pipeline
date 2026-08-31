@@ -123,6 +123,16 @@ jobs:
 
           echo "AWS_ROLE_TO_ASSUME1 is correctly configured for the PROD role."
 
+      - name: Debug GitHub OIDC context
+        run: |
+          echo "Repository: ${GITHUB_REPOSITORY}"
+          echo "Ref: ${GITHUB_REF}"
+          echo "Ref name: ${GITHUB_REF_NAME}"
+          echo "Event: ${GITHUB_EVENT_NAME}"
+          echo "Workflow: ${GITHUB_WORKFLOW}"
+          echo "Workflow ref: ${GITHUB_WORKFLOW_REF}"
+          echo "SHA: ${GITHUB_SHA}"      
+
       - name: Configure AWS credentials from GitHub OIDC
         uses: aws-actions/configure-aws-credentials@v4
         with:
