@@ -131,7 +131,34 @@ jobs:
           echo "Event: ${GITHUB_EVENT_NAME}"
           echo "Workflow: ${GITHUB_WORKFLOW}"
           echo "Workflow ref: ${GITHUB_WORKFLOW_REF}"
-          echo "SHA: ${GITHUB_SHA}"      
+          echo "SHA: ${GITHUB_SHA}"   
+          
+      - name: Inspect GitHub OIDC claims
+        env:
+          ACTIONS_ID_TOKEN_REQUEST_URL: ${{ env.ACTIONS_ID_TOKEN_REQUEST_URL }}
+          ACTIONS_ID_TOKEN_REQUEST_TOKEN: ${{ env.ACTIONS_ID_TOKEN_REQUEST_TOKEN }}
+        run: |
+          TOKEN=$(curl -sS \
+            -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sts.amazonaws.com" \
+            | jq -r '.value')
+
+          PAYLOAD=$(echo "$TOKEN" | cut -d '.' -f2 | tr '_-' '/+' | base64 -d 2>/dev/null || true)
+
+          echo "===== GitHub OIDC Claims ====="
+          echo "$PAYLOAD" | jq '{
+            iss,
+            aud,
+            sub,
+            repository,
+            repository_owner,
+            ref,
+            ref_type,
+            workflow,
+            workflow_ref,
+            event_name
+          }'
+          echo "=============================="     
 
       - name: Configure AWS credentials from GitHub OIDC
         uses: aws-actions/configure-aws-credentials@v4
