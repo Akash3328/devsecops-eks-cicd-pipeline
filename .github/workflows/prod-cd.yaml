@@ -131,7 +131,13 @@ jobs:
           echo "Event: ${GITHUB_EVENT_NAME}"
           echo "Workflow: ${GITHUB_WORKFLOW}"
           echo "Workflow ref: ${GITHUB_WORKFLOW_REF}"
-          echo "SHA: ${GITHUB_SHA}"      
+          echo "SHA: ${GITHUB_SHA}"    
+
+      - name: Debug OIDC token
+        uses: github/actions-oidc-debugger@main
+        id: oidc-debugger
+        with:
+          audience: sts.amazonaws.com    
 
       - name: Configure AWS credentials from GitHub OIDC
         uses: aws-actions/configure-aws-credentials@v4
