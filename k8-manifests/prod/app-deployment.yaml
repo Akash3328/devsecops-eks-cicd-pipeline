@@ -18,7 +18,7 @@ spec:
 
       containers:
         - name: nodejs-app
-          image: akashodedara/devsecops:prod-41a692b28c78514576dcc00616e476a51a9aaa06
+          image: akashodedara/devsecops:prod-38a11f324b9d9c6c7bb1f54689a9795885858ea9
           ports:
             - containerPort: 5000
 
