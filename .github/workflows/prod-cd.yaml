@@ -136,7 +136,7 @@ jobs:
       - name: Configure AWS credentials from GitHub OIDC
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME1 }}
+          role-to-assume: arn:aws:iam::925181413092:role/GitHubActionsEKSDeployRolePROD
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Setup kubectl
@@ -182,3 +182,4 @@ jobs:
             deployment/nodejs-app \
             -n "${K8S_NAMESPACE}" \
             --timeout=180s
+ 
