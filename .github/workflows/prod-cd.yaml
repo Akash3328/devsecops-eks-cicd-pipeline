@@ -109,6 +109,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+      
+      - name: Verify PROD role secret
+        env:
+          PROD_ROLE_ARN: ${{ secrets.AWS_ROLE_TO_ASSUME1 }}
+        run: |
+          EXPECTED_ROLE_ARN="arn:aws:iam::925181413092:role/GitHubActionsEKSDeployRolePROD"
+
+          if [ "$PROD_ROLE_ARN" != "$EXPECTED_ROLE_ARN" ]; then
+            echo "ERROR: AWS_ROLE_TO_ASSUME1 is NOT configured with the PROD role ARN."
+            exit 1
+          fi
+
+          echo "AWS_ROLE_TO_ASSUME1 is correctly configured for the PROD role."
 
       - name: Configure AWS credentials from GitHub OIDC
         uses: aws-actions/configure-aws-credentials@v4
