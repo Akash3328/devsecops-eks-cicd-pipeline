@@ -170,11 +170,7 @@ jobs:
 
           echo "SHA: ${GITHUB_SHA}"    
 
-      - name: Debug OIDC token
-        uses: github/actions-oidc-debugger@main
-        id: oidc-debugger
-        with:
-          audience: sts.amazonaws.com    
+         
 
 
 
