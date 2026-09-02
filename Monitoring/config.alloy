@@ -1,0 +1,161 @@
+
+// ======================================================
+// LOG COLLECTION
+// ======================================================
+
+discovery.kubernetes "prod_pods" {
+  role = "pod"
+
+  namespaces {
+    names = ["prod"]
+  }
+}
+
+discovery.relabel "prod_pod_logs" {
+  targets = discovery.kubernetes.prod_pods.targets
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_annotation_grafana_io_skip_logs"]
+    regex = "true"
+    action = "drop"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_namespace"]
+    target_label = "namespace"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_name"]
+    target_label = "pod"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_container_name"]
+    target_label = "container"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_label_app_kubernetes_io_name"]
+    regex = "(.+)"
+    target_label = "app"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_node_name"]
+    target_label = "node"
+  }
+}
+
+loki.source.kubernetes "prod_pod_logs" {
+  targets = discovery.relabel.prod_pod_logs.output
+  forward_to = [loki.process.prod_pod_logs.receiver]
+}
+
+loki.process "prod_pod_logs" {
+  forward_to = [loki.write.loki_gateway.receiver]
+}
+
+loki.write "loki_gateway" {
+  endpoint {
+    url = "http://loki-gateway:80/loki/api/v1/push"
+  }
+}
+
+
+// ======================================================
+// PROMETHEUS POD METRICS
+// ======================================================
+
+discovery.kubernetes "prod_metrics" {
+  role = "pod"
+
+  namespaces {
+    names = ["prod"]
+  }
+}
+
+discovery.relabel "prod_pod_metrics" {
+  targets = discovery.kubernetes.prod_metrics.targets
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_annotation_prometheus_io_scrape"]
+    regex = "true"
+    action = "keep"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_annotation_prometheus_io_scheme"]
+    target_label = "__scheme__"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_annotation_prometheus_io_path"]
+    regex = "(.+)"
+    target_label = "__metrics_path__"
+  }
+
+  rule {
+    source_labels = ["__address__", "__meta_kubernetes_pod_annotation_prometheus_io_port"]
+
+    regex = "([^:]+)(?::[0-9]+)?;([0-9]+)"
+    replacement = "$1:$2"
+    target_label = "__address__"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_namespace"]
+    target_label = "namespace"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_name"]
+    target_label = "pod"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_container_name"]
+    target_label = "container"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_label_app_kubernetes_io_name"]
+    regex = "(.+)"
+    target_label = "app"
+  }
+
+  rule {
+    source_labels = ["__meta_kubernetes_pod_node_name"]
+    target_label = "node"
+  }
+}
+
+prometheus.scrape "prod_pod_metrics" {
+  targets = discovery.relabel.prod_pod_metrics.output
+
+  forward_to = [prometheus.remote_write.prometheus.receiver]
+
+  scrape_interval = "30s"
+  scrape_timeout = "10s"
+}
+
+prometheus.remote_write "prometheus" {
+  endpoint {
+    url = "http://prometheus-kube-prometheus-prometheus:9090/api/v1/write"
+  }
+}
+
+
+// ======================================================
+// ALLOY SELF-METRICS
+// ======================================================
+
+prometheus.exporter.self "alloy" {}
+
+prometheus.scrape "alloy" {
+  targets = prometheus.exporter.self.alloy.targets
+
+ forward_to = [prometheus.remote_write.prometheus.receiver]
+}
+
+

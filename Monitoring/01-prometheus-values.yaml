@@ -1,0 +1,244 @@
+# ============================================================
+# 01-prometheus-values.yaml
+# kube-prometheus-stack configuration for EKS
+# ============================================================
+
+# ------------------------------------------------------------
+# Grafana
+# ------------------------------------------------------------
+# Grafana will be deployed separately.
+grafana:
+  enabled: false
+
+
+# ------------------------------------------------------------
+# Prometheus
+# ------------------------------------------------------------
+prometheus:
+  enabled: true
+
+  prometheusSpec:
+
+    # --------------------------------------------------------
+    # Retention
+    # --------------------------------------------------------
+    retention: 15d
+    retentionSize: "10GB"
+
+    # --------------------------------------------------------
+    # Enable remote-write receiver
+    # Allows Alloy to push metrics to Prometheus
+    # --------------------------------------------------------
+    enableRemoteWriteReceiver: true
+
+    # --------------------------------------------------------
+    # ServiceMonitor / PodMonitor selection
+    # Watch monitoring and prod namespaces
+    # --------------------------------------------------------
+    serviceMonitorSelector:
+      matchLabels:
+         release: prometheus
+ 
+    podMonitorSelector:
+      matchLabels:
+         release: prometheus
+
+    serviceMonitorNamespaceSelector:
+      matchExpressions:
+        - key: kubernetes.io/metadata.name
+          operator: In
+          values:
+            - monitoring
+            - prod
+
+    
+    podMonitorNamespaceSelector:
+      matchExpressions:
+        - key: kubernetes.io/metadata.name
+          operator: In
+          values:
+            - monitoring
+            - prod
+
+    # --------------------------------------------------------
+    # Persistent Storage
+    # Uses EKS EBS CSI StorageClass
+    # --------------------------------------------------------
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: ebs-sc
+
+          accessModes:
+            - ReadWriteOnce
+
+          resources:
+            requests:
+              storage: 20Gi
+
+    # --------------------------------------------------------
+    # Prometheus resources
+    # --------------------------------------------------------
+    resources:
+      requests:
+        cpu: 500m
+        memory: 1Gi
+
+      limits:
+        cpu: 1000m
+        memory: 2Gi
+
+    # --------------------------------------------------------
+    # Security Context
+    # --------------------------------------------------------
+    securityContext:
+      runAsNonRoot: true
+      runAsUser: 65534
+      fsGroup: 65534
+
+    # --------------------------------------------------------
+    # Service
+    # --------------------------------------------------------
+    service:
+      type: ClusterIP
+      port: 9090
+
+
+# ------------------------------------------------------------
+# Alertmanager
+# ------------------------------------------------------------
+alertmanager:
+  enabled: true
+
+  alertmanagerSpec:
+
+    storage:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: ebs-sc
+
+          accessModes:
+            - ReadWriteOnce
+
+          resources:
+            requests:
+              storage: 2Gi
+
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+
+      limits:
+        cpu: 200m
+        memory: 256Mi
+
+    securityContext:
+      runAsNonRoot: true
+      runAsUser: 65534
+      fsGroup: 65534
+
+
+# ------------------------------------------------------------
+# Prometheus Node Exporter
+# ------------------------------------------------------------
+# Collects node-level metrics:
+#
+# CPU
+# Memory
+# Disk
+# Filesystem
+# Network
+# ------------------------------------------------------------
+prometheus-node-exporter:
+
+  tolerations:
+    - operator: Exists
+      effect: NoSchedule
+
+    - operator: Exists
+      effect: NoExecute
+
+  resources:
+    requests:
+      cpu: 100m
+      memory: 64Mi
+
+    limits:
+      cpu: 200m
+      memory: 128Mi
+
+
+# ------------------------------------------------------------
+# kube-state-metrics
+# ------------------------------------------------------------
+# Provides Kubernetes object/state metrics:
+#
+# Pods
+# Deployments
+# ReplicaSets
+# Services
+# Nodes
+# etc.
+# ------------------------------------------------------------
+kube-state-metrics:
+
+  enabled: true
+
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+    limits:
+      cpu: 200m
+      memory: 256Mi
+
+
+# ------------------------------------------------------------
+# kubelet
+# ------------------------------------------------------------
+# Collect kubelet/container metrics.
+# ------------------------------------------------------------
+kubelet:
+  enabled: true
+
+  serviceMonitor:
+    enabled: true
+
+
+# ------------------------------------------------------------
+# Default Alerting Rules
+# ------------------------------------------------------------
+defaultRules:
+  create: true
+
+  rules:
+    alertmanager: true
+    etcd: false
+    configReloaders: true
+    general: true
+
+    kubelet: true
+    kubeApiserverAvailability: true
+    kubeApiserverBurnrate: true
+    kubeApiserverHistogram: true
+    kubeApiserverSlos: true
+
+    kubeControllerManager: false
+    kubeSchedulerAlerting: false
+
+    kubeStateMetrics: true
+
+    kubeProxy: false
+
+    kubePrometheusGeneral: true
+    kubernetesApps: true
+    kubernetesResources: true
+    kubernetesStorage: true
+    kubernetesSystem: true
+
+    kubePrometheusNodeRecording: true
+    kubePrometheusNodeRecordingRules: true
+
+    node: true

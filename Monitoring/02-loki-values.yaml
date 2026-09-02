@@ -1,0 +1,267 @@
+# ============================================================
+# 02-loki-values.yaml
+# Loki configuration for EKS
+#
+# Chart: grafana-community/loki
+# Version: 6.29.0
+# ============================================================
+
+deploymentMode: SingleBinary
+
+# ------------------------------------------------------------
+# Chunks Cache
+#
+# Reduced for small/QA EKS cluster.
+# Default chart value is much larger.
+# ------------------------------------------------------------
+
+chunksCache:
+  allocatedMemory: 500
+
+
+# ------------------------------------------------------------
+# Loki
+# ------------------------------------------------------------
+
+loki:
+
+  auth_enabled: false
+
+  commonConfig:
+    replication_factor: 1
+
+  # ----------------------------------------------------------
+  # S3 Storage
+  # ----------------------------------------------------------
+
+  storage:
+    type: s3
+
+    bucketNames:
+      chunks: YOUR_S3_BUCKET
+      ruler: YOUR_S3_BUCKET
+      admin: YOUR_S3_BUCKET
+
+    s3:
+      region: ap-south-1
+      s3forcepathstyle: false
+      insecure: false
+
+  # ----------------------------------------------------------
+  # Schema
+  # ----------------------------------------------------------
+
+  schemaConfig:
+    configs:
+      - from: "2024-01-01"
+        store: tsdb
+        object_store: s3
+        schema: v13
+        index:
+          prefix: loki_index_
+          period: 24h
+
+  # ----------------------------------------------------------
+  # Ingester
+  # ----------------------------------------------------------
+
+  ingester:
+    chunk_idle_period: 5m
+    chunk_retain_period: 30s
+    max_chunk_age: 1h
+
+  # ----------------------------------------------------------
+  # Query Range
+  # ----------------------------------------------------------
+
+  query_range:
+    results_cache:
+      cache:
+        enabled: true
+        max_size_mb: 100
+
+  # ----------------------------------------------------------
+  # Limits
+  # ----------------------------------------------------------
+
+  limits_config:
+    retention_period: 30d
+
+    ingestion_rate_mb: 16
+    ingestion_burst_size_mb: 32
+
+    max_query_length: 720h
+    max_query_parallelism: 32
+
+    max_streams_per_user: 10000
+
+    max_line_size: 256000
+
+  # ----------------------------------------------------------
+  # Ruler
+  # ----------------------------------------------------------
+
+  ruler:
+    storage:
+      type: local
+
+      local:
+        directory: /var/loki/rules
+
+
+# ------------------------------------------------------------
+# Service Account / IRSA
+#
+# ServiceAccount is created separately by eksctl.
+#
+# IAM Role:
+# loki-s3-role
+#
+# Therefore Helm must NOT create the ServiceAccount.
+# ------------------------------------------------------------
+
+serviceAccount:
+  create: false
+  name: loki
+
+
+# ------------------------------------------------------------
+# Single Binary
+#
+# Suitable for QA / small environments.
+# ------------------------------------------------------------
+
+singleBinary:
+
+  replicas: 1
+
+  resources:
+    requests:
+      cpu: 500m
+      memory: 512Mi
+
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+
+  # ----------------------------------------------------------
+  # Persistent Storage
+  # ----------------------------------------------------------
+
+  persistence:
+    enabled: true
+    storageClass: ebs-sc
+    size: 10Gi
+
+
+# ------------------------------------------------------------
+# Disable Scalable Components
+#
+# We are running Loki in SingleBinary mode.
+# ------------------------------------------------------------
+
+read:
+  replicas: 0
+
+write:
+  replicas: 0
+
+backend:
+  replicas: 0
+
+ingester:
+  replicas: 0
+
+querier:
+  replicas: 0
+
+queryFrontend:
+  replicas: 0
+
+queryScheduler:
+  replicas: 0
+
+distributor:
+  replicas: 0
+
+compactor:
+  replicas: 0
+
+indexGateway:
+  replicas: 0
+
+bloomCompactor:
+  replicas: 0
+
+bloomGateway:
+  replicas: 0
+
+
+# ------------------------------------------------------------
+# Loki Canary
+#
+# IMPORTANT:
+# This is a TOP-LEVEL key.
+#
+# Disabled because the current EKS cluster has limited
+# pod scheduling capacity and the Canary is not required
+# for this QA monitoring deployment.
+# ------------------------------------------------------------
+
+lokiCanary:
+  enabled: false
+
+
+# ------------------------------------------------------------
+# Gateway
+#
+# nginx gateway in front of Loki.
+# ------------------------------------------------------------
+
+gateway:
+
+  enabled: true
+
+  replicas: 1
+
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+    limits:
+      cpu: 300m
+      memory: 256Mi
+
+  service:
+    type: ClusterIP
+    port: 80
+
+
+# ------------------------------------------------------------
+# Built-in Monitoring
+#
+# We use our own Prometheus / Alloy / Grafana stack.
+# ------------------------------------------------------------
+
+monitoring:
+
+  selfMonitoring:
+    enabled: false
+
+    grafanaAgent:
+      installOperator: false
+
+  serviceMonitor:
+    enabled: true
+
+    labels:
+      release: prometheus
+
+
+# ------------------------------------------------------------
+# Helm Test
+# ------------------------------------------------------------
+
+test:
+  enabled: false
