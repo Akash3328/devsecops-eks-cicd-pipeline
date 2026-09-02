@@ -58,7 +58,6 @@ jobs:
 
     permissions:
       contents: write
-      id-token: write
 
     steps:
 
@@ -109,7 +108,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-      
+
+      # ------------------------------------------------------
+      # Verify the secret contains the correct PROD role ARN
+      # ------------------------------------------------------
       - name: Verify PROD role secret
         env:
           PROD_ROLE_ARN: ${{ secrets.AWS_ROLE_TO_ASSUME1 }}
@@ -123,6 +125,9 @@ jobs:
 
           echo "AWS_ROLE_TO_ASSUME1 is correctly configured for the PROD role."
 
+      # ------------------------------------------------------
+      # Debug GitHub Actions context
+      # ------------------------------------------------------
       - name: Debug GitHub OIDC context
         run: |
           echo "Repository: ${GITHUB_REPOSITORY}"
@@ -131,6 +136,9 @@ jobs:
           echo "Event: ${GITHUB_EVENT_NAME}"
           echo "Workflow: ${GITHUB_WORKFLOW}"
           echo "Workflow ref: ${GITHUB_WORKFLOW_REF}"
+
+
+
           echo "SHA: ${GITHUB_SHA}"   
           
       - name: Inspect GitHub OIDC claims
@@ -160,29 +168,50 @@ jobs:
           }'
           echo "=============================="     
 
+          echo "SHA: ${GITHUB_SHA}"    
+
+         
+
+
+
       - name: Configure AWS credentials from GitHub OIDC
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::925181413092:role/GitHubActionsEKSDeployRolePROD
           aws-region: ${{ env.AWS_REGION }}
 
+      # ------------------------------------------------------
+      # Setup kubectl
+      # ------------------------------------------------------
       - name: Setup kubectl
         uses: azure/setup-kubectl@v4
 
+      # ------------------------------------------------------
+      # Generate EKS kubeconfig
+      # ------------------------------------------------------
       - name: Generate kubeconfig for EKS
         run: |
           aws eks update-kubeconfig \
             --region "${AWS_REGION}" \
             --name "${EKS_CLUSTER_NAME}"
 
+      # ------------------------------------------------------
+      # Verify AWS identity
+      # ------------------------------------------------------
       - name: Verify AWS identity
         run: |
           aws sts get-caller-identity
 
+      # ------------------------------------------------------
+      # Verify Kubernetes context
+      # ------------------------------------------------------
       - name: Verify Kubernetes context
         run: |
           kubectl config current-context
 
+      # ------------------------------------------------------
+      # Verify PROD namespace access
+      # ------------------------------------------------------
       - name: Verify PROD namespace access
         run: |
           kubectl get pods -n "${K8S_NAMESPACE}"
@@ -197,16 +226,21 @@ jobs:
           kubectl auth can-i create ingresses.networking.k8s.io \
             -n "${K8S_NAMESPACE}"
 
+      # ------------------------------------------------------
+      # Deploy PROD manifests
+      # ------------------------------------------------------
       - name: Deploy PROD manifests
         run: |
           kubectl apply \
             -f k8-manifests/prod/ \
             -n "${K8S_NAMESPACE}"
 
+      # ------------------------------------------------------
+      # Verify application rollout
+      # ------------------------------------------------------
       - name: Verify rollout
         run: |
           kubectl rollout status \
             deployment/nodejs-app \
             -n "${K8S_NAMESPACE}" \
             --timeout=180s
- 
