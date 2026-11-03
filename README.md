@@ -1,287 +1,458 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1330" width="1100" height="1330" role="img" aria-label="Animated architecture of the DevSecOps CI/CD pipeline on Amazon EKS" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpiOGNmOTFjZi1kMTI0LTQ1MjMtYTIwMi03MTBiNDVlYzhjNjAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaCuQWJFKOp+t9HYy+JxmeDgAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo1ZTQ0MzgwYS1jMmE4LTQ4MzAtYjhjYi05NjQ0M2RhOGJiZDdscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoqizpYIk5GoyrBZJC7Gg+EQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg9G0Wk+8oOhzhNBWx1YhrXKceYgmPKkHsdGw2Z8xhJVWkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaAZD6pm8vLH8O76ELr2gktMAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIHj9Nstz8VwB89ExVVXQ3Q+KOvOZPb0S8Lxi9tTFtfjLZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQEdZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmI4Y2Y5MWNmLWQxMjQtNDUyMy1hMjAyLTcxMGI0NWVjOGM2MC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmQ5ZWRhZmVmLWJmZGQtNDg4Yy1hNjk0LTM2OWM1MGQ2MGY1MXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCD0bRaT7yg6HOE0FbHViGtcpx5iCY8qQex0bDZnzGElVaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg9QruGWJxgymwKHIawRspngwepkrM3ZBHAMyjRAEKxcWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggX+ZX6hQnzMnG1Pe/Y+pLijmcdxAg7iSzmIpPCaUWrM90Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQL5XgQAVA9NaSgwoVmfHU2UI5JXtl33iQCMgqSuvPUKtSdK2+HPfTEh6Im2CRJEhnKqr2r6zvPcex5ofoWInspQ=</c2pa:manifest></metadata>
-  <title>DevSecOps CI/CD Pipeline on Amazon EKS (animated)</title>
-  <defs>
-    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0L10 5L0 10z" fill="#9db4e3"/>
-    </marker>
-    <style>
-      text { font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
-      .bg { fill: #0b1220; }
-      .panel { fill: #0f192e; stroke: #22345a; stroke-width: 1.2; }
-      .eks { fill: #0d1830; stroke: #4f8cff; stroke-width: 1.4; }
-      .ns { fill: #0c1426; stroke: #2c4678; stroke-width: 1; }
-      .nsmon { fill: #0b1a1b; stroke: #1c6e45; stroke-width: 1; }
-      .plat { fill: #0c1426; stroke: #2c4678; stroke-width: 1; stroke-dasharray: 4 4; }
-      .box { fill: #16233f; stroke-width: 1.8; }
-      .ci { stroke: #3b82f6; }
-      .sec { stroke: #f59e0b; }
-      .aws { stroke: #ff9900; }
-      .k8s { stroke: #4f8cff; }
-      .mon { stroke: #22c55e; }
-      .t  { fill: #eef3ff; font-size: 14px; font-weight: 600; text-anchor: middle; }
-      .tc { fill: #eef3ff; font-size: 13px; font-weight: 600; text-anchor: middle; }
-      .s  { fill: #a3b6dc; font-size: 11px; text-anchor: middle; }
-      .ln { fill: #cdd9f3; font-size: 11.5px; text-anchor: middle; }
-      .lbl { fill: #8196c2; font-size: 11.5px; font-weight: 600; letter-spacing: 0.5px; }
-      .lblmon { fill: #4ade80; font-size: 11.5px; font-weight: 600; letter-spacing: 0.5px; }
-      .ph { fill: #dbe5fb; font-size: 14px; font-weight: 700; letter-spacing: 1px; }
-      .bn { fill: #0b1220; font-size: 14px; font-weight: 800; text-anchor: middle; }
-      .badge { fill: #6aa3ff; }
-      .cap { fill: #8196c2; font-size: 11.5px; }
-      .title { fill: #ffffff; font-size: 24px; font-weight: 700; }
-      .sub { fill: #8aa4d6; font-size: 12.5px; }
+<div align="center">
 
-      /* flowing arrows */
-      .line { fill: none; stroke: #6f8bc4; stroke-width: 2; stroke-dasharray: 7 7; animation: flow 1s linear infinite; }
-      .l-ci  { stroke: #60a5fa; }
-      .l-sec { stroke: #fbbf24; }
-      .l-aws { stroke: #fdba74; }
-      .l-mon { stroke: #4ade80; }
-      .still { fill: none; stroke: #6b7fa8; stroke-width: 1.6; stroke-dasharray: 3 5; }
-      @keyframes flow { to { stroke-dashoffset: -14; } }
+# DevSecOps CI/CD Pipeline on Amazon EKS
 
-      /* stage-by-stage highlight, left to right, phase by phase */
-      .n { animation: lit 14s ease-in-out infinite; }
-      @keyframes lit {
-        0%   { fill: #16233f; }
-        3%   { fill: #2a5bb0; }
-        9%   { fill: #16233f; }
-        100% { fill: #16233f; }
-      }
+**A multi-tier application (React + Node.js + MySQL) shipped to Kubernetes through a security-gated GitHub Actions pipeline, with keyless AWS authentication, managed secrets, and a full Prometheus / Loki / Alloy / Grafana observability stack.**
 
-      @media (prefers-reduced-motion: reduce) {
-        .line, .n { animation: none; }
-        .pk { display: none; }
-      }
-    </style>
-  </defs>
+![AWS EKS](https://img.shields.io/badge/AWS-EKS-FF9900?logo=amazoneks&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-1.34-326CE5?logo=kubernetes&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-containerized-2496ED?logo=docker&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-charts-0F1689?logo=helm&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-metrics-E6522C?logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-dashboards-F46800?logo=grafana&logoColor=white)
+![Loki](https://img.shields.io/badge/Loki-logs-F5A800?logo=grafana&logoColor=white)
+![SonarQube](https://img.shields.io/badge/SonarQube-SAST-4E9BCD?logo=sonarqube&logoColor=white)
+![Trivy](https://img.shields.io/badge/Trivy-CVE%20scan-1904DA?logo=aqua&logoColor=white)
 
-  <rect class="bg" x="0" y="0" width="1100" height="1330"/>
+<br/>
 
-  <text class="title" x="40" y="42">DevSecOps CI/CD Pipeline on Amazon EKS</text>
-  <text class="sub" x="1060" y="42" text-anchor="end">push → secure → deploy → observe</text>
+<img src="docs/architecture.svg" alt="Animated architecture: push, secure, deploy and observe on Amazon EKS" width="100%"/>
 
-  <!-- ===================== PHASE 1 · BUILD & SECURE ===================== -->
-  <rect class="panel" x="20" y="70" width="1060" height="195" rx="16"/>
-  <circle class="badge" cx="48" cy="99" r="13"/><text class="bn" x="48" y="104">1</text>
-  <text class="ph" x="72" y="104">BUILD &amp; SECURE · GitHub Actions</text>
+<sub>**Live architecture:** moving dots show data flowing through the four phases: **① build & secure → ② authenticate & deploy → ③ run on EKS → ④ observe**. Stages light up in order, left to right.</sub>
 
-  <rect class="box ci n" style="animation-delay:0s" x="40" y="125" width="160" height="95" rx="10"/>
-  <text class="t" x="120" y="168">Push / PR</text>
-  <text class="s" x="120" y="188">GitHub repository</text>
+</div>
 
-  <rect class="box sec n" style="animation-delay:1s" x="255" y="125" width="160" height="95" rx="10"/>
-  <text class="t" x="335" y="150">Security gates</text>
-  <text class="ln" x="335" y="171">Gitleaks · secrets</text>
-  <text class="ln" x="335" y="187">Checkov · IaC</text>
-  <text class="ln" x="335" y="203">SonarQube · SAST</text>
+---
 
-  <rect class="box ci n" style="animation-delay:2s" x="470" y="125" width="160" height="95" rx="10"/>
-  <text class="t" x="550" y="168">Docker Build</text>
-  <text class="s" x="550" y="188">container image</text>
+## Table of Contents
 
-  <rect class="box sec n" style="animation-delay:3s" x="685" y="125" width="160" height="95" rx="10"/>
-  <text class="t" x="765" y="153">Image gates</text>
-  <text class="ln" x="765" y="176">Trivy · CVE scan</text>
-  <text class="ln" x="765" y="194">SBOM · supply chain</text>
+1. [Overview](#overview)
+2. [Key Features](#key-features)
+3. [Architecture](#architecture)
+4. [Tech Stack](#tech-stack)
+5. [Repository Structure](#repository-structure)
+6. [Prerequisites](#prerequisites)
+7. [Getting Started](#getting-started)
+8. [CI/CD Pipeline](#cicd-pipeline)
+9. [Secrets Management](#secrets-management)
+10. [Observability Stack](#observability-stack)
+11. [Verification Checklist](#verification-checklist)
+12. [Troubleshooting & Lessons Learned](#troubleshooting--lessons-learned)
+13. [Security Considerations](#security-considerations)
+14. [Roadmap](#roadmap)
+15. [Cleanup](#cleanup)
+16. [Author](#author)
 
-  <rect class="box ci n" style="animation-delay:4s" x="900" y="125" width="160" height="95" rx="10"/>
-  <text class="t" x="980" y="168">Image Registry</text>
-  <text class="s" x="980" y="188">stores the image</text>
+---
 
-  <path id="p1" class="line l-ci"  d="M200 172 H253" marker-end="url(#a)"/>
-  <path id="p2" class="line l-sec" d="M415 172 H468" marker-end="url(#a)"/>
-  <path id="p3" class="line l-ci"  d="M630 172 H683" marker-end="url(#a)"/>
-  <path id="p4" class="line l-sec" d="M845 172 H898" marker-end="url(#a)"/>
+## Overview
 
-  <text class="cap" x="550" y="248" text-anchor="middle">Shift-left security: scanning happens before anything reaches the cluster</text>
+This project demonstrates an end-to-end **DevSecOps workflow** on AWS: code is pushed to GitHub, passes through automated security and quality gates, is built into a container image, and is deployed to an **Amazon EKS** cluster, all without a single long-lived AWS credential stored in GitHub.
 
-  <!-- ===================== PHASE 2 · AUTHENTICATE & DEPLOY ===================== -->
-  <rect class="panel" x="20" y="285" width="1060" height="160" rx="16"/>
-  <circle class="badge" cx="48" cy="314" r="13"/><text class="bn" x="48" y="319">2</text>
-  <text class="ph" x="72" y="319">AUTHENTICATE &amp; DEPLOY · keyless OIDC</text>
+Once running, the workload is observed by a self-hosted monitoring stack: **Prometheus** for metrics, **Loki** (backed by **S3**) for logs, **Grafana Alloy** as the collection agent, and **Grafana** for visualization, exposed securely over HTTPS through an AWS Application Load Balancer.
 
-  <rect class="box ci n" style="animation-delay:5s" x="40" y="340" width="190" height="80" rx="10"/>
-  <text class="t" x="135" y="376">GitHub OIDC token</text>
-  <text class="s" x="135" y="396">short-lived · no AWS keys</text>
+**What this project is meant to show:**
 
-  <rect class="box aws n" style="animation-delay:6s" x="315" y="340" width="190" height="80" rx="10"/>
-  <text class="t" x="410" y="376">AWS IAM Role</text>
-  <text class="s" x="410" y="396">AssumeRoleWithWebIdentity</text>
+- Security shifted left into the pipeline (secrets, IaC, code, image and supply-chain scanning)
+- Passwordless, short-lived cloud access using GitHub OIDC + IAM roles
+- Least-privilege access to the cluster (EKS Access Entry scoped to a single namespace)
+- Secrets pulled from AWS Secrets Manager at runtime, never committed to Git
+- Stateful workloads on Kubernetes (MySQL StatefulSet on EBS)
+- A production-style observability setup, debugged and verified end to end
 
-  <rect class="box aws n" style="animation-delay:7s" x="590" y="340" width="190" height="80" rx="10"/>
-  <text class="t" x="685" y="376">EKS Access Entry</text>
-  <text class="s" x="685" y="396">scoped to namespace qa</text>
+---
 
-  <rect class="box k8s n" style="animation-delay:8s" x="865" y="340" width="190" height="80" rx="10"/>
-  <text class="t" x="960" y="376">kubectl apply</text>
-  <text class="s" x="960" y="396">k8-manifests/</text>
+## Key Features
 
-  <path id="p6" class="line l-ci"  d="M230 380 H313" marker-end="url(#a)"/>
-  <path id="p7" class="line l-aws" d="M505 380 H588" marker-end="url(#a)"/>
-  <path id="p8" class="line l-aws" d="M780 380 H863" marker-end="url(#a)"/>
+| Area | What's implemented |
+|---|---|
+| **CI/CD** | GitHub Actions workflows (`.github/`) that build, scan and deploy |
+| **Shift-left security** | Gitleaks (secrets), Checkov (IaC), SonarQube (SAST / quality gate), Trivy (image CVEs), SBOM generation |
+| **Keyless auth** | GitHub OIDC → IAM Role (`AssumeRoleWithWebIdentity`), trust policies in `github-oidc-trust-policy-qa.json` / `qa-oidc-trust-policy.json` |
+| **Least privilege** | EKS Access Entry scoped to the `qa` namespace |
+| **Secrets** | AWS Secrets Manager + External Secrets Operator (`SecretStore` → `ExternalSecret`) |
+| **Stateful data** | MySQL 8 as a `StatefulSet` with headless service and EBS-backed `volumeClaimTemplates` |
+| **Ingress & TLS** | AWS Load Balancer Controller, ALB Ingress, ACM certificate, HTTP→HTTPS redirect |
+| **Metrics** | `kube-prometheus-stack` (Prometheus, Alertmanager, node-exporter, kube-state-metrics) |
+| **Logs** | Loki in SingleBinary mode, chunks and index stored in S3 via IRSA |
+| **Collection** | Grafana Alloy DaemonSet: pod logs → Loki, annotated pod metrics → Prometheus (`remote_write`) |
+| **One-command monitoring** | `Monitoring/deploy.ps1` provisions S3, IAM, IRSA and all four Helm releases idempotently |
 
-  <path id="p5" class="line l-ci" d="M970 220 V338" marker-end="url(#a)"/>
-  <text class="cap" x="982" y="296">image reference</text>
+---
 
-  <!-- ===================== PHASE 3 · RUN ON EKS ===================== -->
-  <rect class="panel" x="20" y="465" width="1060" height="415" rx="16"/>
-  <circle class="badge" cx="48" cy="494" r="13"/><text class="bn" x="48" y="499">3</text>
-  <text class="ph" x="72" y="499">RUN ON AWS · Amazon EKS, ap-south-1</text>
+## Architecture
 
-  <!-- user traffic row -->
-  <rect class="box ci" x="40" y="520" width="150" height="56" rx="10"/>
-  <text class="t" x="115" y="545">Users</text><text class="s" x="115" y="563">browser</text>
-  <rect class="box aws" x="250" y="520" width="150" height="56" rx="10"/>
-  <text class="t" x="325" y="545">DNS</text><text class="s" x="325" y="563">CNAME → ALB</text>
-  <rect class="box aws" x="460" y="520" width="180" height="56" rx="10"/>
-  <text class="t" x="550" y="545">ALB Ingress</text><text class="s" x="550" y="563">HTTPS · host routing</text>
-  <rect class="box aws" x="720" y="520" width="180" height="56" rx="10"/>
-  <text class="t" x="810" y="545">ACM Certificate</text><text class="s" x="810" y="563">TLS for the ALB</text>
+The animated diagram above is the map of the whole system. The four numbered phases in it match the four sections below.
 
-  <path id="u1" class="line l-ci"  d="M190 548 H248" marker-end="url(#a)"/>
-  <path id="u2" class="line l-aws" d="M400 548 H458" marker-end="url(#a)"/>
-  <path class="still" d="M718 548 H642" marker-end="url(#a)"/>
+**① Build & secure (GitHub Actions)**
+A push or pull request triggers the pipeline. The security gates run first: **Gitleaks** (leaked secrets), **Checkov** (IaC misconfigurations) and **SonarQube** (static analysis and quality gate). The app is then built into a container image, scanned with **Trivy**, an **SBOM** is generated, and the image goes to the registry.
 
-  <!-- EKS cluster -->
-  <rect class="eks" x="30" y="600" width="840" height="252" rx="14"/>
-  <text class="lbl" x="50" y="624">AMAZON EKS · my-cluster · Kubernetes 1.34</text>
+**② Authenticate & deploy (keyless)**
+The workflow requests a short-lived **GitHub OIDC token** and exchanges it for temporary credentials by assuming an **IAM role**. The role is mapped into the cluster through an **EKS Access Entry** limited to the `qa` namespace, and the manifests in `k8-manifests/` are applied with `kubectl`.
 
-  <!-- monitoring reference -->
-  <rect class="nsmon" x="50" y="640" width="190" height="110" rx="10"/>
-  <text class="lblmon" x="62" y="660">namespace: monitoring</text>
-  <rect class="box mon" x="62" y="676" width="166" height="54" rx="8"/>
-  <text class="tc" x="145" y="699">Monitoring stack</text>
-  <text class="s" x="145" y="717">see phase 4 below</text>
+**③ Run on AWS (Amazon EKS)**
+- **Application**: the `nodejs-app` Deployment (port 5000) and a `mysql` StatefulSet run in `prod`; the pipeline deploys to `qa`.
+- **Traffic**: Users → DNS (CNAME) → ALB Ingress (HTTPS, ACM certificate) → Services. The AWS Load Balancer Controller provisions the ALB.
+- **Secrets**: the External Secrets Operator syncs credentials from AWS Secrets Manager into Kubernetes Secrets.
+- **Storage**: the EBS CSI driver provisions gp3 volumes through the `ebs-sc` StorageClass.
 
-  <!-- qa -->
-  <rect class="ns" x="255" y="640" width="170" height="110" rx="10"/>
-  <text class="lbl" x="267" y="660">namespace: qa</text>
-  <rect class="box k8s" x="267" y="676" width="146" height="54" rx="8"/>
-  <text class="tc" x="340" y="699">Workloads</text>
-  <text class="s" x="340" y="717">deployed by CI/CD</text>
+**④ Observe (`monitoring` namespace)**
+Alloy tails pod logs (via the Kubernetes API) and scrapes annotated pod metrics in the `prod` namespace. Logs go to Loki through the nginx gateway and are stored in S3. Metrics are remote-written to Prometheus. Grafana queries both and is exposed over HTTPS through the ALB.
 
-  <!-- prod -->
-  <rect class="ns" x="440" y="640" width="410" height="110" rx="10"/>
-  <text class="lbl" x="452" y="660">namespace: prod</text>
-  <rect class="box k8s n" style="animation-delay:9s" x="455" y="676" width="180" height="54" rx="8"/>
-  <text class="tc" x="545" y="699">nodejs-app</text>
-  <text class="s" x="545" y="717">Deployment · :5000</text>
-  <rect class="box k8s" x="660" y="676" width="180" height="54" rx="8"/>
-  <text class="tc" x="750" y="699">mysql-0</text>
-  <text class="s" x="750" y="717">StatefulSet · EBS gp3</text>
+---
 
-  <path id="u3" class="line l-aws" d="M590 576 V674" marker-end="url(#a)"/>
+## Tech Stack
 
-  <!-- platform controllers -->
-  <rect class="plat" x="50" y="764" width="800" height="78" rx="10"/>
-  <text class="lbl" x="62" y="781">PLATFORM CONTROLLERS</text>
-  <rect class="box k8s" x="65" y="790" width="180" height="46" rx="8"/>
-  <text class="tc" x="155" y="809">AWS LB Controller</text>
-  <text class="s" x="155" y="826">provisions the ALB</text>
-  <rect class="box k8s" x="265" y="790" width="180" height="46" rx="8"/>
-  <text class="tc" x="355" y="809">EBS CSI Driver</text>
-  <text class="s" x="355" y="826">StorageClass ebs-sc</text>
-  <rect class="box k8s" x="660" y="790" width="180" height="46" rx="8"/>
-  <text class="tc" x="750" y="809">External Secrets</text>
-  <text class="s" x="750" y="826">syncs Secrets Manager</text>
+| Layer | Technology |
+|---|---|
+| Cloud | AWS (EKS, IAM, S3, EBS, Secrets Manager, ALB, ACM) |
+| Orchestration | Kubernetes 1.34 on Amazon EKS (`eksctl`) |
+| Application | React (client), Node.js (server), MySQL 8 |
+| Containers | Docker |
+| CI/CD | GitHub Actions with OIDC federation |
+| Security scanning | Gitleaks, Checkov, SonarQube, Trivy, SBOM |
+| Secrets | AWS Secrets Manager, External Secrets Operator |
+| Packaging | Helm |
+| Metrics | Prometheus (`kube-prometheus-stack` 67.4.0), Alertmanager |
+| Logs | Loki 6.29.0 (SingleBinary, S3 backend) |
+| Collection | Grafana Alloy 0.12.0 |
+| Visualization | Grafana 8.10.4 (chart) |
+| Automation | PowerShell (`deploy.ps1`) |
 
-  <path id="e1" class="line l-aws" d="M750 790 V732" marker-end="url(#a)"/>
+---
 
-  <!-- Secrets Manager -->
-  <rect class="box aws" x="890" y="782" width="170" height="62" rx="10"/>
-  <text class="t" x="975" y="808">Secrets Manager</text>
-  <text class="s" x="975" y="827">DB credentials</text>
-  <path id="s1" class="line l-aws" d="M890 813 H842" marker-end="url(#a)"/>
+## Repository Structure
 
-  <!-- ===================== PHASE 4 · OBSERVE ===================== -->
-  <rect class="panel" x="20" y="900" width="1060" height="360" rx="16"/>
-  <circle class="badge" cx="48" cy="929" r="13"/><text class="bn" x="48" y="934">4</text>
-  <text class="ph" x="72" y="934">OBSERVE · namespace: monitoring</text>
+```text
+devsecops-eks-cicd-pipeline/
+├── .github/                          # GitHub Actions workflows (CI/CD pipeline)
+├── client/                           # React front end
+├── server/                           # Node.js API
+├── k8-manifests/                     # Kubernetes manifests applied by the pipeline
+├── Monitoring/                       # Observability stack (Helm values + deploy script)
+│   ├── deploy.ps1                    #   one-shot, idempotent installer
+│   ├── 01-prometheus-values.yaml     #   kube-prometheus-stack
+│   ├── 02-loki-values.yaml           #   Loki (SingleBinary, S3)
+│   ├── 03-alloy-values.yaml          #   Alloy pipelines (logs + metrics)
+│   ├── 04-grafana-values.yaml        #   Grafana (ALB ingress, datasources)
+│   └── 05-loki-s3-iam-policy.json    #   least-privilege S3 policy for Loki
+├── Dockerfile                        # Container image build
+├── .dockerignore
+├── sonar-project.properties          # SonarQube project configuration
+├── github-oidc-trust-policy-qa.json  # IAM trust policy for GitHub OIDC (qa)
+├── qa-oidc-trust-policy.json         # IAM trust policy variant
+├── secret-store-prod.yaml            # External Secrets: SecretStore (prod)
+├── external-secret-prod.yaml         # External Secrets: ExternalSecret (prod)
+├── mysql-statefulset-prod.yaml       # MySQL StatefulSet (prod)
+├── mysql-svc-prod.yaml               # MySQL headless service (prod)
+├── alloy-rendered.yaml               # Rendered Alloy manifest (reference/debugging)
+└── docs/
+    └── architecture.svg              # Architecture diagram
+```
 
-  <rect class="box k8s" x="40" y="1115" width="150" height="60" rx="10"/>
-  <text class="t" x="115" y="1141">prod pods</text>
-  <text class="s" x="115" y="1160">logs + /metrics</text>
+---
 
-  <rect class="box mon n" style="animation-delay:10s" x="235" y="1115" width="150" height="60" rx="10"/>
-  <text class="t" x="310" y="1141">Grafana Alloy</text>
-  <text class="s" x="310" y="1160">DaemonSet</text>
+## Prerequisites
 
-  <rect class="box aws n" style="animation-delay:12s" x="430" y="960" width="190" height="60" rx="10"/>
-  <text class="t" x="525" y="986">Amazon S3</text>
-  <text class="s" x="525" y="1005">log chunks · 30-day expiry</text>
+**Tooling** (the monitoring script checks for these automatically)
 
-  <rect class="box mon n" style="animation-delay:11s" x="430" y="1060" width="190" height="60" rx="10"/>
-  <text class="t" x="525" y="1086">Loki</text>
-  <text class="s" x="525" y="1105">gateway · SingleBinary</text>
+- `aws` CLI v2, authenticated (`aws sts get-caller-identity` works)
+- `kubectl`, `helm`, `eksctl`
+- PowerShell (Windows PowerShell 5.1 or PowerShell 7+) to run `deploy.ps1`
+- Docker (for local image builds)
 
-  <rect class="box mon n" style="animation-delay:11s" x="430" y="1170" width="190" height="60" rx="10"/>
-  <text class="t" x="525" y="1196">Prometheus</text>
-  <text class="s" x="525" y="1215">kube-prometheus-stack</text>
+**AWS / cluster**
 
-  <rect class="box mon n" style="animation-delay:13s" x="710" y="1115" width="160" height="60" rx="10"/>
-  <text class="t" x="790" y="1141">Grafana</text>
-  <text class="s" x="790" y="1160">dashboards</text>
+- An EKS cluster (examples use `my-cluster` in `ap-south-1`) with the **IAM OIDC provider** associated
+- **EBS CSI driver** add-on installed, plus a StorageClass named `ebs-sc` (see below)
+- **AWS Load Balancer Controller** installed (Helm + IRSA) for ALB ingress
+- An **ACM certificate** and a DNS record you control for the Grafana hostname
+- An AWS account with permission to create S3 buckets, IAM policies and roles
 
-  <rect class="box ci" x="930" y="1115" width="130" height="60" rx="10"/>
-  <text class="t" x="995" y="1141">Browser</text>
-  <text class="s" x="995" y="1160">https · via ALB</text>
+---
 
-  <path id="o1" class="line l-mon" d="M190 1145 H233" marker-end="url(#a)"/>
-  <path id="o2" class="line l-mon" d="M385 1135 C410 1135 405 1090 428 1090" marker-end="url(#a)"/>
-  <path id="o3" class="line l-mon" d="M385 1155 C410 1155 405 1200 428 1200" marker-end="url(#a)"/>
-  <path id="o4" class="line l-aws" d="M525 1060 V1022" marker-end="url(#a)"/>
-  <path id="q1" class="line l-mon" d="M710 1135 C675 1135 665 1090 622 1090" marker-end="url(#a)"/>
-  <path id="q2" class="line l-mon" d="M710 1155 C675 1155 665 1200 622 1200" marker-end="url(#a)"/>
-  <path id="b1" class="line l-ci"  d="M930 1145 H872" marker-end="url(#a)"/>
+## Getting Started
 
-  <text class="cap" x="386" y="1078">logs</text>
-  <text class="cap" x="384" y="1224">metrics</text>
-  <text class="cap" x="665" y="1149" text-anchor="middle">queries</text>
-  <text class="cap" x="550" y="1250" text-anchor="middle">Alloy tails pod logs and scrapes annotated pods in namespace prod</text>
+> Replace the example values (`my-cluster`, `ap-south-1`, bucket and domain names) with your own.
 
-  <!-- ===================== legend ===================== -->
-  <g>
-    <rect x="40" y="1285" width="14" height="14" rx="3" fill="#16233f" stroke="#3b82f6" stroke-width="1.8"/>
-    <text class="cap" x="62" y="1297">CI/CD stage</text>
-    <rect x="190" y="1285" width="14" height="14" rx="3" fill="#16233f" stroke="#f59e0b" stroke-width="1.8"/>
-    <text class="cap" x="212" y="1297">Security gate</text>
-    <rect x="350" y="1285" width="14" height="14" rx="3" fill="#16233f" stroke="#ff9900" stroke-width="1.8"/>
-    <text class="cap" x="372" y="1297">AWS service</text>
-    <rect x="500" y="1285" width="14" height="14" rx="3" fill="#16233f" stroke="#4f8cff" stroke-width="1.8"/>
-    <text class="cap" x="522" y="1297">Kubernetes workload</text>
-    <rect x="690" y="1285" width="14" height="14" rx="3" fill="#16233f" stroke="#22c55e" stroke-width="1.8"/>
-    <text class="cap" x="712" y="1297">Observability</text>
-    <text class="cap" x="1060" y="1297" text-anchor="end">moving dots = data flow</text>
-  </g>
+### 1. Cluster access and OIDC
 
-  <!-- ===================== moving packets ===================== -->
-  <g class="pk">
-    <circle r="4.5" fill="#60a5fa"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
-    <circle r="4.5" fill="#fbbf24"><animateMotion dur="1.6s" begin="0.4s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
-    <circle r="4.5" fill="#60a5fa"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle>
-    <circle r="4.5" fill="#fbbf24"><animateMotion dur="1.6s" begin="1.2s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></circle>
-    <circle r="4.5" fill="#60a5fa"><animateMotion dur="2s" repeatCount="indefinite"><mpath href="#p5"/></animateMotion></circle>
+```powershell
+aws eks update-kubeconfig --region ap-south-1 --name my-cluster
+eksctl utils associate-iam-oidc-provider --cluster my-cluster --region ap-south-1 --approve
+```
 
-    <circle r="4.5" fill="#60a5fa"><animateMotion dur="2s" repeatCount="indefinite"><mpath href="#p6"/></animateMotion></circle>
-    <circle r="4.5" fill="#fdba74"><animateMotion dur="2s" begin="0.5s" repeatCount="indefinite"><mpath href="#p7"/></animateMotion></circle>
-    <circle r="4.5" fill="#fdba74"><animateMotion dur="2s" begin="1s" repeatCount="indefinite"><mpath href="#p8"/></animateMotion></circle>
+### 2. Storage: the `ebs-sc` StorageClass
 
-    <circle r="4.5" fill="#60a5fa"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#u1"/></animateMotion></circle>
-    <circle r="4.5" fill="#fdba74"><animateMotion dur="1.6s" begin="0.5s" repeatCount="indefinite"><mpath href="#u2"/></animateMotion></circle>
-    <circle r="4.5" fill="#fdba74"><animateMotion dur="2.2s" begin="1s" repeatCount="indefinite"><mpath href="#u3"/></animateMotion></circle>
+Installing the EBS CSI **add-on** installs the *driver*. It does **not** create the StorageClass the manifests reference. Create it explicitly:
 
-    <circle r="4.5" fill="#fdba74"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#e1"/></animateMotion></circle>
-    <circle r="4.5" fill="#fdba74"><animateMotion dur="1.8s" begin="0.6s" repeatCount="indefinite"><mpath href="#s1"/></animateMotion></circle>
+```yaml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: ebs-sc
+provisioner: ebs.csi.aws.com
+volumeBindingMode: WaitForFirstConsumer
+parameters:
+  type: gp3
+```
 
-    <circle r="4.5" fill="#4ade80"><animateMotion dur="1.4s" repeatCount="indefinite"><mpath href="#o1"/></animateMotion></circle>
-    <circle r="4.5" fill="#4ade80"><animateMotion dur="1.6s" begin="0.3s" repeatCount="indefinite"><mpath href="#o2"/></animateMotion></circle>
-    <circle r="4.5" fill="#4ade80"><animateMotion dur="1.6s" begin="0.6s" repeatCount="indefinite"><mpath href="#o3"/></animateMotion></circle>
-    <circle r="4.5" fill="#fdba74"><animateMotion dur="1.4s" begin="0.9s" repeatCount="indefinite"><mpath href="#o4"/></animateMotion></circle>
+```powershell
+kubectl apply -f ebs-sc.yaml
+kubectl get storageclass
+```
 
-    <circle r="4.5" fill="#4ade80"><animateMotion dur="1.8s" begin="0.2s" repeatCount="indefinite"><mpath href="#q1"/></animateMotion></circle>
-    <circle r="4.5" fill="#4ade80"><animateMotion dur="1.8s" begin="0.7s" repeatCount="indefinite"><mpath href="#q2"/></animateMotion></circle>
-    <circle r="4.5" fill="#60a5fa"><animateMotion dur="1.4s" begin="0.4s" repeatCount="indefinite"><mpath href="#b1"/></animateMotion></circle>
-  </g>
-</svg>
+### 3. Namespaces
+
+```powershell
+kubectl create namespace qa
+kubectl create namespace prod
+kubectl create namespace monitoring
+```
+
+### 4. Secrets (External Secrets Operator)
+
+Install ESO, store the database credentials in AWS Secrets Manager, then apply the store and the secret mapping:
+
+```powershell
+kubectl apply -f secret-store-prod.yaml
+kubectl apply -f external-secret-prod.yaml
+kubectl get secretstore,externalsecret -n prod
+```
+
+### 5. Database
+
+```powershell
+kubectl apply -f mysql-svc-prod.yaml
+kubectl apply -f mysql-statefulset-prod.yaml
+kubectl get pods,pvc -n prod
+```
+
+### 6. Application
+
+Application manifests live in `k8-manifests/` and are normally applied by the pipeline. To apply them manually:
+
+```powershell
+kubectl apply -f k8-manifests/ -n qa
+```
+
+### 7. Monitoring stack (one command)
+
+Edit the configuration block at the top of `Monitoring/deploy.ps1` (region, cluster, bucket name), then:
+
+```powershell
+cd Monitoring
+.\deploy.ps1
+```
+
+The script is **idempotent**: re-running it is safe. It will:
+
+1. Run pre-flight checks and configure `kubeconfig`
+2. Create or verify the S3 bucket, block public access, and apply a 30-day lifecycle rule
+3. Create or verify the Loki IAM policy and the IRSA role/ServiceAccount (`loki-s3-role`) via `eksctl`
+4. Install **Prometheus → Loki → Alloy → Grafana** with pinned chart versions
+5. Prompt for the Grafana admin password and store it in a Kubernetes Secret
+6. Print pods, services, PVCs, ServiceMonitors and Helm releases
+
+---
+
+## CI/CD Pipeline
+
+| # | Stage | Tool | Purpose |
+|---|---|---|---|
+| 1 | Secret scanning | **Gitleaks** | Block commits that contain credentials or tokens |
+| 2 | IaC scanning | **Checkov** | Catch insecure Kubernetes / Docker / IaC configuration |
+| 3 | Static analysis | **SonarQube** | Bugs, code smells, vulnerabilities, quality gate (`sonar-project.properties`) |
+| 4 | Build | **Docker** | Build the application container image |
+| 5 | Image scanning | **Trivy** | Detect known CVEs in the built image |
+| 6 | Supply chain | **SBOM** | Produce a software bill of materials for the image |
+| 7 | Publish | Registry | Push the image for the cluster to pull |
+| 8 | Authenticate | **GitHub OIDC → IAM Role** | Exchange a short-lived OIDC token for temporary AWS credentials |
+| 9 | Deploy | **kubectl** | Apply `k8-manifests/` through an EKS Access Entry scoped to `qa` |
+
+**Why OIDC instead of access keys?** There is nothing to leak or rotate. The IAM role's trust policy only accepts tokens issued by GitHub for this specific repository (see the `*-trust-policy*.json` files), and the credentials expire within minutes.
+
+---
+
+## Secrets Management
+
+No secret is committed to this repository.
+
+```text
+AWS Secrets Manager ──► External Secrets Operator ──► Kubernetes Secret ──► MySQL / API pods
+        (source of truth)     (SecretStore + ExternalSecret)
+```
+
+- `secret-store-prod.yaml` tells ESO how to authenticate to AWS Secrets Manager.
+- `external-secret-prod.yaml` declares which keys to sync and the target Kubernetes Secret.
+- The Grafana admin password is entered interactively by `deploy.ps1` and stored as `grafana-admin-secret`. It is never written to a values file.
+
+---
+
+## Observability Stack
+
+### Components
+
+| Component | Chart / version | Role |
+|---|---|---|
+| Prometheus + Alertmanager | `kube-prometheus-stack` 67.4.0 | Metrics storage, alerting, node-exporter, kube-state-metrics |
+| Loki | `grafana-community/loki` 6.29.0 | Log storage (SingleBinary), S3 chunks and index |
+| Alloy | `grafana/alloy` 0.12.0 | Log tailing and metric scraping agent (DaemonSet) |
+| Grafana | `grafana/grafana` 8.10.4 | Dashboards, Prometheus + Loki datasources, ALB ingress |
+
+### Data flow
+
+```text
+prod pods ──► Alloy (DaemonSet) ──logs──►    loki-gateway ──► Loki ──► S3 bucket
+                      │
+                      └──────metrics──► Prometheus (remote_write)
+
+Grafana ──queries──► Prometheus   +   Loki
+```
+
+### Design decisions
+
+- **Loki auth to S3 uses IRSA.** The `loki` ServiceAccount is created by `eksctl` with the `loki-s3-role` annotation; the Helm chart is told **not** to create it (`serviceAccount.create: false`, top-level).
+- **Loki policy is least-privilege**: `GetObject`/`PutObject`/`DeleteObject` on the bucket's objects, `ListBucket`/`GetBucketLocation` on the bucket only.
+- **Alloy collects from the `prod` namespace.** Discovery is scoped in `03-alloy-values.yaml`, so workloads elsewhere will not appear in Loki until you widen it.
+- **Pods can opt out of log collection** with the annotation `grafana.io/skip_logs: "true"`.
+- **Metrics are opt-in** per pod via `prometheus.io/scrape`, `prometheus.io/port`, `prometheus.io/path` annotations.
+- **Right-sized for a small cluster**: the memcached chunks cache is capped (`chunksCache.allocatedMemory: 500`) and the Loki canary is disabled.
+- **Grafana is hardened**: non-root user, dropped capabilities, secure cookies, HSTS, sign-up and anonymous access disabled.
+
+### Accessing Grafana
+
+1. Get the ALB address:
+   ```powershell
+   kubectl get ingress -n monitoring
+   ```
+2. Create a **CNAME** record for your Grafana hostname pointing to that ALB address.
+3. Open `https://<your-grafana-hostname>` and log in as `admin` with the password you entered during deployment.
+4. Go to **Connections → Data sources** and click **Test** on Prometheus and Loki.
+
+### Useful queries
+
+**Loki (Explore → Loki)**
+```logql
+{namespace="prod"}
+{namespace="prod", container="nodejs-app"}
+{namespace="prod"} |= "error"
+```
+
+**Prometheus (Explore → Prometheus)**
+```promql
+loki_write_sent_entries_total        # Alloy → Loki delivery
+loki_write_dropped_entries_total     # should stay at 0
+up{namespace="prod"}
+```
+
+---
+
+## Verification Checklist
+
+```powershell
+kubectl get nodes                      # all nodes Ready
+kubectl get pods -n monitoring         # everything Running / Ready
+kubectl get pvc  -n monitoring         # every PVC Bound
+helm list -n monitoring                # prometheus, loki, alloy, grafana = deployed
+kubectl get ingress -n monitoring      # ALB address present
+```
+
+Then in Grafana: both datasources pass **Test**, and `{namespace="prod"}` returns recent logs.
+
+> **Tip:** Loki only shows what pods have actually written. A quiet pod that logged nothing since startup returns no recent lines, which is correct behavior and not a pipeline fault. Generate traffic (or restart a pod) and query the **last 5 minutes**.
+
+---
+
+## Troubleshooting & Lessons Learned
+
+Real problems hit while building this project, and how each was diagnosed and fixed.
+
+| Symptom | Root cause | Fix |
+|---|---|---|
+| `ServiceAccount "loki" ... cannot be imported into the current release` | `serviceAccount:` was nested under `loki:`, but the chart reads it as a **top-level** key, so Helm tried to create an SA that `eksctl` already owned | Move `serviceAccount: {create: false, name: loki}` to the top level of the values file |
+| `helm ... --wait` times out; `loki-0` stuck `Pending` | PVC `storage-loki-0` unbound: the `ebs-sc` StorageClass did not exist (installing the EBS CSI *add-on* does not create it) | Create the `ebs-sc` StorageClass; verify with `kubectl get storageclass` |
+| `loki-chunks-cache-0` `Pending`: `Insufficient memory` | Chart default asks for ~9.6 GiB for memcached, larger than the nodes | Set top-level `chunksCache.allocatedMemory: 500` |
+| `loki-canary` pods `Pending` on some nodes | Not needed here; contributes to pod/memory pressure on small nodes | Disable with top-level `lokiCanary.enabled: false` (not nested under `monitoring:` for this chart) |
+| Grafana URL shows a Vercel `404 DEPLOYMENT_NOT_FOUND` | The hostname still resolved to another host (Vercel), not the ALB | Create a `CNAME` for the Grafana subdomain → ALB address |
+| Grafana login fails with the password typed during deploy | `admin.existingSecret` only **seeds** the password on first boot; the database persists it afterwards | `kubectl exec -n monitoring deploy/grafana -c grafana -- grafana-cli admin reset-admin-password '<new>'` |
+| Loki Explore shows "No options found" / no logs | Pods had not emitted new log lines; Alloy only tails the `prod` namespace | Generate activity, query the last 5 min, confirm with `{namespace="prod"}` |
+| `curl -H ...` fails in PowerShell | `curl` is an alias for `Invoke-WebRequest` | Use `curl.exe`, or `Invoke-RestMethod` with a hashtable body |
+| Node count dropped unexpectedly and scheduling failed | Node group capacity was reduced | Check `eksctl get nodegroup`; scale the node group back up |
+
+**Debugging approach that worked every time:**
+
+```powershell
+kubectl get pods -n <ns> -o wide
+kubectl describe pod <pod> -n <ns>          # read the Events section first
+kubectl get pvc -n <ns>
+kubectl logs <pod> -n <ns> -c <container> --previous
+kubectl get events -n <ns> --sort-by=.metadata.creationTimestamp
+```
+
+---
+
+## Security Considerations
+
+- **No long-lived AWS keys** anywhere: GitHub OIDC with short-lived role sessions
+- **Namespace-scoped cluster access** via EKS Access Entry (`qa` only)
+- **Secrets stay out of Git**: Secrets Manager + ESO; Grafana password supplied at deploy time
+- **S3 hardening**: public access fully blocked, 30-day lifecycle expiry, least-privilege IAM policy
+- **IRSA** for Loki, so pods get scoped AWS permissions instead of node-wide IAM roles
+- **Container hardening in Grafana**: `runAsNonRoot`, dropped Linux capabilities, `RuntimeDefault` seccomp, no privilege escalation
+- **TLS everywhere on the edge**: ACM certificate, HTTP→HTTPS redirect, HSTS and secure cookies
+- **Supply chain visibility**: Trivy image scanning and SBOM generation in CI
+
+> Before publishing to a public repository, review the manifests and values files for account IDs, ARNs, bucket names and domain names you may not want to expose.
+
+---
+
+## Roadmap
+
+- [ ] Distributed tracing with **Grafana Tempo** (third pillar of observability)
+- [ ] Alertmanager routes and receivers (Slack / email) plus custom alert rules
+- [ ] Dashboards-as-code (provision JSON dashboards through ConfigMaps and the Grafana sidecar)
+- [ ] Horizontal Pod Autoscaler and cluster autoscaling
+- [ ] Image signing and admission policy (Cosign + Kyverno)
+- [ ] Promotion workflow from `qa` to `prod` with manual approval
+- [ ] Infrastructure as Code for the cluster and IAM (Terraform)
+
+---
+
+## Cleanup
+
+Avoid ongoing AWS charges when you are done:
+
+```powershell
+# Monitoring stack
+helm uninstall grafana alloy loki prometheus -n monitoring
+
+# Persistent volumes created by the releases
+kubectl delete pvc --all -n monitoring
+
+# Application workloads
+kubectl delete namespace qa prod monitoring
+
+# S3 bucket (empties then deletes)
+aws s3 rb s3://<your-loki-bucket> --force
+
+# IAM resources
+eksctl delete iamserviceaccount --cluster my-cluster --namespace monitoring --name loki --region ap-south-1
+aws iam delete-policy --policy-arn arn:aws:iam::<account-id>:policy/LokiS3Policy
+
+# The cluster itself (the largest cost)
+eksctl delete cluster --name my-cluster --region ap-south-1
+```
+
+Also delete the DNS CNAME and any ALB left behind if the ingress was not removed cleanly.
+
+---
+
+## Author
+
+**Akash**, building toward cloud / DevOps engineering roles through hands-on projects.
+
+- GitHub: [@Akash3328](https://github.com/Akash3328)
+
+If this project helped you, consider giving it a ⭐.
