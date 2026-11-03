@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 840" width="1280" height="840" role="img" aria-label="DevSecOps CI/CD pipeline on Amazon EKS architecture" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2YjFlZWE1Ni0wYjk5LTRiOGItYjBiMy0xNjE5OTQ5NGJjOGQAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaHtiev5PbX3SGPNpPQoXSQIAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo4YWE4YmJmNi0xM2YxLTQzMTgtOGRmNy0xYTdiNGQwMDdkYmRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoGqburHWX8Z1kAicPMTjpqAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg+AyATMPeQ5uuHKKkxMAdFFtjukZQmWYG+x5qST6YMGOkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaI0N3JttEfUDPDJovfLI5YkAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIB3sj+/Hfak7KRp1n2+6ArFCaoFf0B1jgZDbPlIVs86IZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQELZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjZiMWVlYTU2LTBiOTktNGI4Yi1iMGIzLTE2MTk5NDk0YmM4ZC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmViMThhYmUzLTg2MjAtNDc1MC05NjRkLTZjYjQ3MDk4NWNkNHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCD4DIBMw95Dm64coqTEwB0UW2O6RlCZZgb7HmpJPpgwY6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg1l7VOZtOTg2/TApVi01UWMgORJ/MfSMGzaRjdpJXJtmiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggI5xPjhZ+za42VEBcHuQy2rdY27SqT84CoeVjibRjaGt0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQGOEhrAwY/dwGN1xaQd6wGmtWmd2W3TLk6W/agijBbURdUHaNvHQfXGrppTCKQex5qP6G/u84JWmaAJb0P7O4x8=</c2pa:manifest></metadata>
+  <title>DevSecOps CI/CD Pipeline on Amazon EKS</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8aa4d6"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
+      .bg { fill: #0b1220; }
+      .panel { fill: #101a30; stroke: #24365a; stroke-width: 1.2; }
+      .awspanel { fill: #0e1729; stroke: #ff9900; stroke-width: 1.4; stroke-dasharray: 6 4; }
+      .ns { fill: #0d1527; stroke: #2f4a80; stroke-width: 1; }
+      .nsmon { fill: #0c1a1c; stroke: #1f7a4a; stroke-width: 1; }
+      .box { fill: #16233f; stroke-width: 1.6; }
+      .ci { stroke: #3b82f6; }
+      .sec { stroke: #f59e0b; }
+      .aws { stroke: #ff9900; }
+      .k8s { stroke: #4f8cff; }
+      .mon { stroke: #22c55e; }
+      .t { fill: #e8eefc; font-size: 13px; font-weight: 600; text-anchor: middle; }
+      .tc { fill: #e8eefc; font-size: 12px; font-weight: 600; text-anchor: middle; }
+      .s { fill: #9fb3d9; font-size: 10.5px; text-anchor: middle; }
+      .lbl { fill: #7f93bd; font-size: 11px; font-weight: 600; letter-spacing: 0.6px; }
+      .lblaws { fill: #ff9900; font-size: 12px; font-weight: 700; letter-spacing: 0.8px; }
+      .lblmon { fill: #4ade80; font-size: 11px; font-weight: 600; letter-spacing: 0.6px; }
+      .cap { fill: #7f93bd; font-size: 10.5px; }
+      .title { fill: #ffffff; font-size: 21px; font-weight: 700; }
+      .sub { fill: #8aa4d6; font-size: 12px; }
+      .arr { stroke: #8aa4d6; stroke-width: 1.6; fill: none; }
+      .dash { stroke: #6b7fa8; stroke-width: 1.4; stroke-dasharray: 4 4; fill: none; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1280" height="840"/>
+
+  <text class="title" x="40" y="36">DevSecOps CI/CD Pipeline on Amazon EKS</text>
+  <text class="sub" x="1240" y="36" text-anchor="end">Akash3328/devsecops-eks-cicd-pipeline</text>
+
+  <!-- ============ LANE 1: CI ============ -->
+  <rect class="panel" x="20" y="58" width="1240" height="150" rx="14"/>
+  <text class="lbl" x="40" y="82">① CONTINUOUS INTEGRATION · GitHub Actions</text>
+
+  <g>
+    <rect class="box ci" x="40" y="100" width="120" height="64" rx="8"/>
+    <text class="t" x="100" y="126">Developer</text>
+    <text class="s" x="100" y="146">git push / PR</text>
+  </g>
+  <g>
+    <rect class="box ci" x="190" y="100" width="130" height="64" rx="8"/>
+    <text class="t" x="255" y="126">GitHub Repo</text>
+    <text class="s" x="255" y="146">branches · PR checks</text>
+  </g>
+
+  <g>
+    <rect class="box sec" x="350" y="100" width="112" height="64" rx="8"/>
+    <text class="t" x="406" y="126">Gitleaks</text>
+    <text class="s" x="406" y="146">secret scanning</text>
+  </g>
+  <g>
+    <rect class="box sec" x="476" y="100" width="112" height="64" rx="8"/>
+    <text class="t" x="532" y="126">Checkov</text>
+    <text class="s" x="532" y="146">IaC misconfig scan</text>
+  </g>
+  <g>
+    <rect class="box sec" x="602" y="100" width="112" height="64" rx="8"/>
+    <text class="t" x="658" y="126">SonarQube</text>
+    <text class="s" x="658" y="146">SAST · quality gate</text>
+  </g>
+  <g>
+    <rect class="box ci" x="728" y="100" width="112" height="64" rx="8"/>
+    <text class="t" x="784" y="126">Docker Build</text>
+    <text class="s" x="784" y="146">container image</text>
+  </g>
+  <g>
+    <rect class="box sec" x="854" y="100" width="112" height="64" rx="8"/>
+    <text class="t" x="910" y="126">Trivy</text>
+    <text class="s" x="910" y="146">image CVE scan</text>
+  </g>
+  <g>
+    <rect class="box sec" x="980" y="100" width="112" height="64" rx="8"/>
+    <text class="t" x="1036" y="126">SBOM</text>
+    <text class="s" x="1036" y="146">SBOM generation</text>
+  </g>
+  <g>
+    <rect class="box ci" x="1106" y="100" width="112" height="64" rx="8"/>
+    <text class="t" x="1162" y="126">Push Image</text>
+    <text class="s" x="1162" y="146">to image registry</text>
+  </g>
+
+  <path class="arr" d="M160 132 H188" marker-end="url(#a)"/>
+  <path class="arr" d="M320 132 H348" marker-end="url(#a)"/>
+  <path class="arr" d="M462 132 H474" marker-end="url(#a)"/>
+  <path class="arr" d="M588 132 H600" marker-end="url(#a)"/>
+  <path class="arr" d="M714 132 H726" marker-end="url(#a)"/>
+  <path class="arr" d="M840 132 H852" marker-end="url(#a)"/>
+  <path class="arr" d="M966 132 H978" marker-end="url(#a)"/>
+  <path class="arr" d="M1092 132 H1104" marker-end="url(#a)"/>
+
+  <path d="M350 178 H1092" stroke="#f59e0b" stroke-width="1.2" fill="none"/>
+  <text class="cap" x="721" y="197" text-anchor="middle">shift-left security gates run on every push, before anything reaches the cluster</text>
+
+  <!-- ============ LANE 2: CD ============ -->
+  <rect class="panel" x="20" y="222" width="1240" height="100" rx="14"/>
+  <text class="lbl" x="40" y="246">② CONTINUOUS DEPLOYMENT · keyless AWS authentication via OIDC</text>
+
+  <g>
+    <rect class="box ci" x="40" y="258" width="200" height="56" rx="8"/>
+    <text class="t" x="140" y="282">GitHub OIDC token</text>
+    <text class="s" x="140" y="300">short-lived · no static AWS keys</text>
+  </g>
+  <g>
+    <rect class="box aws" x="280" y="258" width="210" height="56" rx="8"/>
+    <text class="t" x="385" y="282">AWS IAM Role</text>
+    <text class="s" x="385" y="300">AssumeRoleWithWebIdentity</text>
+  </g>
+  <g>
+    <rect class="box aws" x="530" y="258" width="220" height="56" rx="8"/>
+    <text class="t" x="640" y="282">EKS Access Entry</text>
+    <text class="s" x="640" y="300">scoped to namespace qa</text>
+  </g>
+  <g>
+    <rect class="box k8s" x="790" y="258" width="170" height="56" rx="8"/>
+    <text class="t" x="875" y="282">kubectl apply</text>
+    <text class="s" x="875" y="300">k8-manifests/</text>
+  </g>
+  <g>
+    <rect class="box ci" x="1000" y="258" width="220" height="56" rx="8"/>
+    <text class="t" x="1110" y="282">Image Registry</text>
+    <text class="s" x="1110" y="300">image pulled by EKS nodes</text>
+  </g>
+
+  <path class="arr" d="M240 286 H278" marker-end="url(#a)"/>
+  <path class="arr" d="M490 286 H528" marker-end="url(#a)"/>
+  <path class="arr" d="M750 286 H788" marker-end="url(#a)"/>
+  <path class="arr" d="M1000 286 H962" marker-end="url(#a)"/>
+  <path class="arr" d="M1162 164 V256" marker-end="url(#a)"/>
+  <text class="cap" x="1172" y="226">docker push</text>
+
+  <!-- ============ AWS CLOUD ============ -->
+  <rect class="awspanel" x="20" y="340" width="1240" height="445" rx="14"/>
+  <text class="lblaws" x="40" y="364">AWS CLOUD · ap-south-1</text>
+
+  <path class="arr" d="M875 314 V390" marker-end="url(#a)"/>
+  <text class="cap" x="885" y="372">deploys</text>
+
+  <!-- left column: ingress path -->
+  <g>
+    <rect class="box ci" x="40" y="410" width="130" height="50" rx="8"/>
+    <text class="t" x="105" y="432">Users</text>
+    <text class="s" x="105" y="448">browser</text>
+  </g>
+  <g>
+    <rect class="box aws" x="40" y="490" width="130" height="50" rx="8"/>
+    <text class="t" x="105" y="512">DNS</text>
+    <text class="s" x="105" y="528">CNAME → ALB</text>
+  </g>
+  <g>
+    <rect class="box aws" x="40" y="570" width="130" height="64" rx="8"/>
+    <text class="t" x="105" y="596">ALB Ingress</text>
+    <text class="s" x="105" y="616">HTTPS · ACM cert</text>
+  </g>
+  <path class="arr" d="M105 460 V488" marker-end="url(#a)"/>
+  <path class="arr" d="M105 540 V568" marker-end="url(#a)"/>
+  <path class="arr" d="M170 602 H198" marker-end="url(#a)"/>
+
+  <!-- EKS cluster -->
+  <rect class="panel" x="200" y="392" width="800" height="353" rx="14" style="stroke:#4f8cff"/>
+  <text class="lbl" x="220" y="414">AMAZON EKS · my-cluster · Kubernetes 1.34</text>
+
+  <!-- qa namespace -->
+  <rect class="ns" x="215" y="426" width="205" height="190" rx="10"/>
+  <text class="lbl" x="230" y="446">namespace: qa</text>
+  <g>
+    <rect class="box k8s" x="230" y="458" width="175" height="36" rx="7"/>
+    <text class="tc" x="317" y="481">React client</text>
+  </g>
+  <g>
+    <rect class="box k8s" x="230" y="504" width="175" height="36" rx="7"/>
+    <text class="tc" x="317" y="527">Node.js API :5000</text>
+  </g>
+  <g>
+    <rect class="box k8s" x="230" y="550" width="175" height="36" rx="7"/>
+    <text class="tc" x="317" y="573">MySQL 8 StatefulSet</text>
+  </g>
+
+  <!-- prod namespace -->
+  <rect class="ns" x="432" y="426" width="205" height="190" rx="10"/>
+  <text class="lbl" x="447" y="446">namespace: prod</text>
+  <g>
+    <rect class="box k8s" x="447" y="458" width="175" height="36" rx="7"/>
+    <text class="tc" x="534" y="481">React client</text>
+  </g>
+  <g>
+    <rect class="box k8s" x="447" y="504" width="175" height="36" rx="7"/>
+    <text class="tc" x="534" y="527">Node.js API :5000</text>
+  </g>
+  <g>
+    <rect class="box k8s" x="447" y="550" width="175" height="36" rx="7"/>
+    <text class="tc" x="534" y="573">MySQL 8 StatefulSet</text>
+  </g>
+
+  <!-- monitoring namespace -->
+  <rect class="nsmon" x="650" y="426" width="335" height="190" rx="10"/>
+  <text class="lblmon" x="665" y="446">namespace: monitoring</text>
+  <g>
+    <rect class="box mon" x="665" y="462" width="145" height="44" rx="7"/>
+    <text class="tc" x="737" y="481">Alloy</text>
+    <text class="s" x="737" y="496">DaemonSet · prod logs</text>
+  </g>
+  <g>
+    <rect class="box mon" x="840" y="462" width="135" height="44" rx="7"/>
+    <text class="tc" x="907" y="481">Prometheus</text>
+    <text class="s" x="907" y="496">kube-prometheus-stack</text>
+  </g>
+  <g>
+    <rect class="box mon" x="665" y="538" width="145" height="44" rx="7"/>
+    <text class="tc" x="737" y="557">Loki</text>
+    <text class="s" x="737" y="572">SingleBinary → S3</text>
+  </g>
+  <g>
+    <rect class="box mon" x="840" y="538" width="135" height="44" rx="7"/>
+    <text class="tc" x="907" y="557">Grafana</text>
+    <text class="s" x="907" y="572">dashboards · ALB</text>
+  </g>
+  <path class="arr" d="M810 484 H838" marker-end="url(#a)"/>
+  <path class="arr" d="M737 506 V536" marker-end="url(#a)"/>
+  <path class="arr" d="M840 560 H812" marker-end="url(#a)"/>
+  <path class="arr" d="M907 538 V508" marker-end="url(#a)"/>
+  <text class="cap" x="665" y="604">Alloy ▸ metrics + logs · Grafana ▸ queries both</text>
+
+  <!-- platform controllers -->
+  <rect class="ns" x="215" y="630" width="770" height="100" rx="10"/>
+  <text class="lbl" x="230" y="650">PLATFORM CONTROLLERS</text>
+  <g>
+    <rect class="box k8s" x="230" y="662" width="175" height="52" rx="7"/>
+    <text class="tc" x="317" y="684">External Secrets (ESO)</text>
+    <text class="s" x="317" y="701">SecretStore → ExternalSecret</text>
+  </g>
+  <g>
+    <rect class="box k8s" x="420" y="662" width="175" height="52" rx="7"/>
+    <text class="tc" x="507" y="684">AWS LB Controller</text>
+    <text class="s" x="507" y="701">ALB Ingress via IRSA</text>
+  </g>
+  <g>
+    <rect class="box k8s" x="610" y="662" width="175" height="52" rx="7"/>
+    <text class="tc" x="697" y="684">EBS CSI Driver</text>
+    <text class="s" x="697" y="701">gp3 volumes · ebs-sc</text>
+  </g>
+  <g>
+    <rect class="box k8s" x="800" y="662" width="175" height="52" rx="7"/>
+    <text class="tc" x="887" y="684">node-exporter · KSM</text>
+    <text class="s" x="887" y="701">node &amp; object metrics</text>
+  </g>
+
+  <!-- right column: AWS services -->
+  <g>
+    <rect class="box aws" x="1040" y="420" width="200" height="56" rx="8"/>
+    <text class="t" x="1140" y="444">AWS Secrets Manager</text>
+    <text class="s" x="1140" y="462">DB creds · synced by ESO</text>
+  </g>
+  <g>
+    <rect class="box aws" x="1040" y="496" width="200" height="56" rx="8"/>
+    <text class="t" x="1140" y="520">IAM Roles (IRSA)</text>
+    <text class="s" x="1140" y="538">loki-s3-role · LB Controller</text>
+  </g>
+  <g>
+    <rect class="box aws" x="1040" y="572" width="200" height="56" rx="8"/>
+    <text class="t" x="1140" y="596">Amazon S3</text>
+    <text class="s" x="1140" y="614">Loki chunks · 30-day expiry</text>
+  </g>
+  <g>
+    <rect class="box aws" x="1040" y="648" width="200" height="56" rx="8"/>
+    <text class="t" x="1140" y="672">Amazon EBS (gp3)</text>
+    <text class="s" x="1140" y="690">PVCs: MySQL · Prom · Grafana</text>
+  </g>
+  <path class="arr" d="M1040 448 H1002" marker-end="url(#a)"/>
+  <path class="dash" d="M1040 524 H1002"/>
+  <path class="arr" d="M1002 600 H1038" marker-end="url(#a)"/>
+  <path class="dash" d="M1040 676 H1002"/>
+
+  <!-- legend -->
+  <g>
+    <rect x="40" y="806" width="14" height="14" rx="3" fill="#16233f" stroke="#3b82f6" stroke-width="1.6"/>
+    <text class="cap" x="62" y="817">CI/CD stage</text>
+    <rect x="180" y="806" width="14" height="14" rx="3" fill="#16233f" stroke="#f59e0b" stroke-width="1.6"/>
+    <text class="cap" x="202" y="817">Security gate</text>
+    <rect x="330" y="806" width="14" height="14" rx="3" fill="#16233f" stroke="#ff9900" stroke-width="1.6"/>
+    <text class="cap" x="352" y="817">AWS service</text>
+    <rect x="470" y="806" width="14" height="14" rx="3" fill="#16233f" stroke="#4f8cff" stroke-width="1.6"/>
+    <text class="cap" x="492" y="817">Kubernetes workload</text>
+    <rect x="650" y="806" width="14" height="14" rx="3" fill="#16233f" stroke="#22c55e" stroke-width="1.6"/>
+    <text class="cap" x="672" y="817">Observability</text>
+  </g>
+</svg>
